@@ -8,7 +8,7 @@ export default function DataLabels(){
     const data=usePolling('http://localhost:5000/api/metrics',1000) as MonitorData;
     let cpuTexts:string[]=[];
     let gpuTexts:string[]=[];
-    const message:string = "//Not running as administrator, some data might be unfetchable";
+    const message:string = "//Server not running as administrator, some data might be unfetchable";
     if(data){
         //console.log(data);
         const cpuData = data.CPU;
@@ -34,7 +34,7 @@ export default function DataLabels(){
                 gpuTexts.push(gpu.name);
             else
                 gpuTexts.push("name unavailable");
-            if(gpu.CoreLoad)
+            if(gpu.CoreLoad&&gpu.CoreLoad>0)
                 gpuTexts.push(`LOAD:${gpu.CoreLoad}%`);
             else
                 gpuTexts.push("LOAD:--");
