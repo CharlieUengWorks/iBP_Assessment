@@ -8,7 +8,7 @@
 5. run "npm install"
 6. run "npm run build"
 7. run "npm run start"
-8. start the provided server binary or build a new one with the project [here](https://github.com/CharlieUengWorks/iBP_APICore))
+8. start the provided server binary or build a new one with the project [here](https://github.com/CharlieUengWorks/iBP_APICore)
 9. go to http://localhost:3000
 
 ## Design
