@@ -27,5 +27,7 @@ Bloom and outline post processing effects are used to better the quality.
 
 The server is a simple restful api server that whenever a get request is received it creates a computer object, sorts out the required data and returns it as a json string.
 
+Blender is also used to fix geometry and material issues to produce a glb file ready to be loaded.
+
 ## Credit
 Computer model - https://sketchfab.com/salvatore.butera1998
