@@ -6,5 +6,5 @@ export interface CoreValue {
 export interface MonitorData {
     IsRunningAsAdmin:boolean;
     CPU:CoreValue;
-    GPU:CoreValue;
+    GPU:CoreValue[];
 }
