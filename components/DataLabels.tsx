@@ -18,11 +18,11 @@ export default function DataLabels(){
             cpuTexts.push(cpuData.name);
         else
             cpuTexts.push("name unavailable");
-        if(cpuData.CoreLoad)
+        if(cpuData.CoreLoad&&cpuData.CoreLoad>=0)
             cpuTexts.push(`LOAD:${cpuData.CoreLoad}%`);
         else
             cpuTexts.push("LOAD:--");
-        if(cpuData.CoreTemperature&&cpuData.CoreTemperature>0)
+        if(cpuData.CoreTemperature&&cpuData.CoreTemperature>=0)
             cpuTexts.push(`TEMP:${cpuData.CoreTemperature}°C`);
         else
             cpuTexts.push("TEMP:--");
@@ -34,11 +34,11 @@ export default function DataLabels(){
                 gpuTexts.push(gpu.name);
             else
                 gpuTexts.push("name unavailable");
-            if(gpu.CoreLoad&&gpu.CoreLoad>0)
+            if(gpu.CoreLoad&&gpu.CoreLoad>=0)
                 gpuTexts.push(`LOAD:${gpu.CoreLoad}%`);
             else
                 gpuTexts.push("LOAD:--");
-            if(gpu.CoreTemperature&&gpu.CoreTemperature>0)
+            if(gpu.CoreTemperature&&gpu.CoreTemperature>=0)
                 gpuTexts.push(`TEMP:${gpu.CoreTemperature}°C`);
             else
                 gpuTexts.push("TEMP:--");
